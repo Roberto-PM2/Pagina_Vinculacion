@@ -16,18 +16,18 @@ def inicio(request):
     return render(request, 'MainPage.html')
 
 
-def bolsatrabajo(request):
-    return render(request, 'BolsaTrabajo.html')
+def sector_productivo(request):
+    return render(request, 'SectorProductivo.html')
 
 
-def seguridad(request):
-    return render(request, 'Seguridad.html')
+def estudios_factibilidad(request):
+    return render(request, 'Estudios_Factibilidad.html')
 
 
-def eb(request):
-    return render(request, 'eb.html')
+def educacion_continua(request):
+    return render(request, 'EducacionContinua.html')
 
-def area(request):
+def area_administrativa(request):
     return render(request, 'AreaAdministrativa.html')
 
 def fortalecimiento(request):

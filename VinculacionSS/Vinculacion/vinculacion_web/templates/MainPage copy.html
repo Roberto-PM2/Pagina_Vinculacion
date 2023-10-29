@@ -1,0 +1,654 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Vinculacion
+{% endblock titulo %}
+    
+
+{% block contenido %}
+{% load static %}
+<style>
+  /* Estilo para oscurecer las imágenes en el carrusel */
+  #myCarousel .carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Cambia el valor alpha (0.5) para ajustar la intensidad del oscurecimiento */
+  }
+  #myCarousel .carousel-caption {
+    color: white; /* Cambia el color del texto si es necesario */
+  }
+</style>
+
+<div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'img/uaz_fondito.jpg' %}" class="d-block w-100" alt="...">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Vision institucional</h1>
+            <p class="opacity-75">Para el año 2025, La Universidad Autónoma de Zacatecas "Francisco García Salinas" 
+              se visualiza como una institución moderna y de vanguardia, que atiende las necesidades educativas,
+              se proyecta entre las mejores instituciones públicas de educación superior del país 
+              y prevalece como la más importante de Zacatecas, al contribuir en la solución de los principales problemas
+               del desarrollo regional y nacional, forjando el futuro con el arte, la ciencia y el desarrollo cultural.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">boton ejemplo</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/uaz_fondito.jpg' %}" class="d-block w-100" alt="...">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>MISIÓN DE LA COORDINACIÓN DE VINCULACIÓN</h1>
+            <p>Vincular a la Universidad Autónoma de Zacatecas "Francisco García Salinas (UAZ), 
+              con los sectores: social, productivo, académico y gubernamental; 
+              a través de programas y proyectos que coadyuven en el desarrollo integral de la Universidad, 
+              el Estado y del País.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">boton ejemplo</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/uaz_fondito.jpg' %}" class="d-block w-100" alt="...">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>VISIÓN DE LA COORDINACIÓN DE VINCULACIÓN</h1>
+            <p>Para el año 2025, ser la instancia de vinculación de las instituciones de educación superior más importante de la región 
+              centro- norte que atienda las necesidades del sector productivo, social, 
+              académico y gubernamental a través de los servicios que brinda la universidad en materia de investigación, 
+              docencia y extensión, para el desarrollo social y humano.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">boton ejemplo</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+       
+<p></p>
+ 
+ 
+<!--HTML hr tag is used here-->
+<hr>
+ 
+<p></p>
+<h1>Conoce a nuestro equipo de trabajo</h1>
+  
+  <div class="container marketing">
+
+    <!-- columnas de personas -->
+    <div class="row">
+      <div class="col-lg-4">
+        <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+        <h2 class="fw-normal">Responsable Administrativo</h2>
+        <p class="description">Descripción Placeholder</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div>
+    
+      <div class="col-lg-4">
+        <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+        <h2 class="fw-normal">Subcoordinacion de Servicio Social</h2>
+        <p class="description">Descripción Placeholder</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div>
+    
+      <div class="col-lg-4">
+        <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+        <h2 class="fw-normal">Responsable del Programa de Fortalecimiento</h2>
+        <p class="description">Descripción Placeholder</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div>
+    
+      <div class="col-lg-4">
+        <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+        <h2 class="fw-normal">Responsable de Certificación y Evaluación de Competencia</h2>
+        <p class="description">Descripción Placeholder</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div>
+    
+      <div class="col-lg-4">
+        <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+        <h2 class="fw-normal">Responsable del Programa para el Registro de Eventos e Integración de Área de Educación Continua</h2>
+        <p class "description">Descripción Placeholder</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div>
+    
+      <div class="col-lg-4">
+        <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+        <h2 class="fw-normal">Responsable del Programa de Servicios de Capacitación</h2>
+        <p class="description">Descripción Placeholder</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div>
+    
+      <div class="col-lg-4">
+        <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+        <h2 class="fw-normal">Responsable del Sector Productivo</h2>
+        <p class="description">Descripción Placeholder</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div>
+    
+      <div class="col-lg-4">
+        <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+        <h2 class="fw-normal">Responsable del Programa de Gestión y Seguimiento de Convenios</h2>
+        <p class="description">Descripción Placeholder</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div>
+    
+      <div class="col-lg-4">
+        <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+        <h2 class="fw-normal">Responsable del Programa de Estudios de Factibilidad</h2>
+        <p class="description">Descripción Placeholder</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div>
+    </div>
+    
+
+     <!-- links para las oficinas -->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="{% static 'img/uaz_fondito.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="{% static 'img/uaz_fondito.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a short card.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- links para las gentes version 2 -->
+    <section class="pt-5 pb-5">
+      <div class="container">
+          <div class="row">
+              <div class="col-6">
+                  <h3 class="mb-3">Conoce a nuestro equipo</h3>
+              </div>
+              <div class="col-6 text-right">
+                  <a class="btn btn-primary mb-3 me-1" href="#carouselExampleIndicators2" role="button" data-bs-slide="prev">
+                      <i class="fa fa-arrow-left"></i>
+                  </a>
+                  <a class="btn btn-primary mb-3" href="#carouselExampleIndicators2" role="button" data-bs-slide="next">
+                      <i class="fa fa-arrow-right"></i>
+                  </a>
+              </div>
+              <div class="col-12">
+                  <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                        <!-- parte 1 -->
+                          <div class="carousel-item active">
+                              <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="card h-100">
+                                      <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+                                      <div class="card-body">
+                                            <h4 class="card-title">Responsable Administrativo</h4>
+                                            <p class="card-text">Descripción Placeholder</p>
+                                            <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="col-md-4 mb-3">
+                                    <div class="card h-100">
+                                      <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+                                      <div class="card-body">
+                                            <h4 class="card-title">Subcoordinacion de Servicio Social</h4>
+                                            <p class="card-text">Descripción Placeholder</p>
+                                            <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="col-md-4 mb-3">
+                                    <div class="card h-100">
+                                      <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+                                      <div class="card-body">
+                                            <h4 class="card-title">Responsable del Programa de Fortalecimiento</h4>
+                                            <p class="card-text">Descripción Placeholder</p>
+                                            <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                          <!-- parte 2 -->
+                          <div class="carousel-item">
+                              <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="card h-100">
+                                      <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+                                      <div class="card-body">
+                                            <h4 class="card-title">Responsable de Certificación y Evaluación de Competencia</h4>
+                                            <p class="card-text">Descripción Placeholder</p>
+                                            <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="col-md-4 mb-3">
+                                    <div class="card h-100">
+                                      <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+                                      <div class="card-body">
+                                            <h4 class="card-title">Responsable del Programa para el Registro de Eventos e Integración de Área de Educación Continua</h4>
+                                            <p class="card-text">Descripción Placeholder</p>
+                                            <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="col-md-4 mb-3">
+                                    <div class="card h-100">
+                                      <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+                                      <div class="card-body">
+                                            <h4 class="card-title">Responsable del Programa de Servicios de Capacitación</h4>
+                                            <p class="card-text">Descripción Placeholder</p>
+                                            <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                        </div>
+                                    </div>
+                                </div>  
+                              </div>
+                          </div>
+                          <!-- parte 3 -->
+
+                          <div class="carousel-item">
+                            <div class="row">
+                              <div class="col-md-4 mb-3">
+                                  <div class="card h-100">
+                                    <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+                                    <div class="card-body">
+                                          <h4 class="card-title">Responsable del Sector Productivo</h4>
+                                          <p class="card-text">Descripción Placeholder</p>
+                                          <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                      </div>
+                                  </div>
+                              </div>
+                  
+                              <div class="col-md-4 mb-3">
+                                  <div class="card h-100">
+                                    <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+                                    <div class="card-body">
+                                          <h4 class="card-title">Responsable del Programa de Gestión y Seguimiento de Convenios</h4>
+                                          <p class="card-text">Descripción Placeholder</p>
+                                          <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                      </div>
+                                  </div>
+                              </div>
+                  
+                              <div class="col-md-4 mb-3">
+                                  <div class="card h-100">
+                                    <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+                                    <div class="card-body">
+                                          <h4 class="card-title">Responsable del Programa de Estudios de Factibilidad</h4>
+                                          <p class="card-text">Descripción Placeholder</p>
+                                          <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                      </div>
+                                  </div>
+                              </div>  
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- links para las oficinas -->
+<section class="pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h3 class="mb-3">Conoce a nuestro equipo</h3>
+            </div>
+            <div class="col-6 text-right">
+                <a class="btn btn-primary mb-3 me-1" href="#carouselExampleIndicators2" role="button" data-bs-slide="prev">
+                    <i class="fa fa-arrow-left"></i>
+                </a>
+                <a class="btn btn-primary mb-3" href="#carouselExampleIndicators2" role="button" data-bs-slide="next">
+                    <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="col-12">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <!-- parte 1 -->
+                        <div class="carousel-item active">
+                            <div class="row">
+                              <div class="col-md-4 mb-3">
+                                  <div class="card h-100">
+                                    <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+                                    <div class="card-body">
+                                          <h4 class="card-title">Responsable Administrativo</h4>
+                                          <p class="card-text">Descripción Placeholder</p>
+                                          <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                      </div>
+                                  </div>
+                              </div>
+                  
+                              <div class="col-md-4 mb-3">
+                                  <div class="card h-100">
+                                    <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+                                    <div class="card-body">
+                                          <h4 class="card-title">Subcoordinacion de Servicio Social</h4>
+                                          <p class="card-text">Descripción Placeholder</p>
+                                          <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                      </div>
+                                  </div>
+                              </div>
+                  
+                              <div class="col-md-4 mb-3">
+                                  <div class="card h-100">
+                                    <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+                                    <div class="card-body">
+                                          <h4 class="card-title">Responsable del Programa de Fortalecimiento</h4>
+                                          <p class="card-text">Descripción Placeholder</p>
+                                          <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                        </div>
+                        <!-- parte 2 -->
+                        <div class="carousel-item">
+                            <div class="row">
+                              <div class="col-md-4 mb-3">
+                                  <div class="card h-100">
+                                    <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+                                    <div class="card-body">
+                                          <h4 class="card-title">Responsable de Certificación y Evaluación de Competencia</h4>
+                                          <p class="card-text">Descripción Placeholder</p>
+                                          <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                      </div>
+                                  </div>
+                              </div>
+                  
+                              <div class="col-md-4 mb-3">
+                                  <div class="card h-100">
+                                    <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+                                    <div class="card-body">
+                                          <h4 class="card-title">Responsable del Programa para el Registro de Eventos e Integración de Área de Educación Continua</h4>
+                                          <p class="card-text">Descripción Placeholder</p>
+                                          <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                      </div>
+                                  </div>
+                              </div>
+                  
+                              <div class="col-md-4 mb-3">
+                                  <div class="card h-100">
+                                    <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+                                    <div class="card-body">
+                                          <h4 class="card-title">Responsable del Programa de Servicios de Capacitación</h4>
+                                          <p class="card-text">Descripción Placeholder</p>
+                                          <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                      </div>
+                                  </div>
+                              </div>  
+                            </div>
+                        </div>
+                        <!-- parte 3 -->
+
+                        <div class="carousel-item">
+                          <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <div class="card h-100">
+                                  <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+                                  <div class="card-body">
+                                        <h4 class="card-title">Responsable del Sector Productivo</h4>
+                                        <p class="card-text">Descripción Placeholder</p>
+                                        <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="col-md-4 mb-3">
+                                <div class="card h-100">
+                                  <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+                                  <div class="card-body">
+                                        <h4 class="card-title">Responsable del Programa de Gestión y Seguimiento de Convenios</h4>
+                                        <p class="card-text">Descripción Placeholder</p>
+                                        <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="col-md-4 mb-3">
+                                <div class="card h-100">
+                                  <img src="{% static 'img/user_icon.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" >
+                                  <div class="card-body">
+                                        <h4 class="card-title">Responsable del Programa de Estudios de Factibilidad</h4>
+                                        <p class="card-text">Descripción Placeholder</p>
+                                        <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>  
+                          </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
+  
+ 
+  </div><!-- /.container -->
+    
+
+    
+{% endblock contenido %}
+
+
+
+<div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'img/logo_uaz2.jpeg' %}" class="d-block mx-auto" style="width: 100%; max-height: 400px;" alt="...">
+
+      <div class="container">
+        <div class="carousel-caption text-start">
+          <h1>Vision institucional</h1>
+          <p class="opacity-75">Para el año 2025, La Universidad Autónoma de Zacatecas "Francisco García Salinas" 
+            se visualiza como una institución moderna y de vanguardia, que atiende las necesidades educativas,
+            se proyecta entre las mejores instituciones públicas de educación superior del país 
+            y prevalece como la más importante de Zacatecas, al contribuir en la solución de los principales problemas
+            del desarrollo regional y nacional, forjando el futuro con el arte, la ciencia y el desarrollo cultural.</p>
+          <p><a class="btn btn-lg btn-primary" href="#">boton ejemplo</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'img/edificio_vinculacion.jpg' %}" class="d-block mx-auto" style="width: 100%; max-height: 400px;" alt="...">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>MISIÓN DE LA COORDINACIÓN DE VINCULACIÓN</h1>
+          <p>Vincular a la Universidad Autónoma de Zacatecas "Francisco García Salinas (UAZ), 
+            con los sectores: social, productivo, académico y gubernamental; 
+            a través de programas y proyectos que coadyuven en el desarrollo integral de la Universidad, 
+            el Estado y del País.</p>
+          <p><a class="btn btn-lg btn-primary" href="#">boton ejemplo</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'img/UAZentrada.jpg' %}" class="d-block mx-auto" style="width: 100%; max-height: 400px;" alt="...">
+      <div class="container">
+        <div class="carousel-caption text-end">
+          <h1>VISIÓN DE LA COORDINACIÓN DE VINCULACIÓN</h1>
+          <p>Para el año 2025, ser la instancia de vinculación de las instituciones de educación superior más importante de la región 
+            centro- norte que atienda las necesidades del sector productivo, social, 
+            académico y gubernamental a través de los servicios que brinda la universidad en materia de investigación, 
+            docencia y extensión, para el desarrollo social y humano.</p>
+          <p><a class="btn btn-lg btn-primary" href="#">boton ejemplo</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+<!-- links para las oficinas -->
+<section class="pt-5 pb-5">
+  <div class="container">
+      <div class="row">
+          <div class="col-6">
+              <h3 class="mb-3">Servicios</h3>
+          </div>
+          <div class="col-6 text-right">
+              <a class="btn btn-primary mb-3 me-1" href="#carouselExampleIndicators3" role="button" data-bs-slide="prev">
+                  <i class="fa fa-arrow-left"></i>
+              </a>
+              <a class="btn btn-primary mb-3" href="#carouselExampleIndicators3" role="button" data-bs-slide="next">
+                  <i class="fa fa-arrow-right"></i>
+              </a>
+          </div>
+          <div class="col-12">
+              <div id="carouselExampleIndicators3" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <!-- parte 1 -->
+                      <div class="carousel-item active">
+                          <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <div class="card h-100">
+                                  <img src="{% static 'img/uaz_fondito.jpg' %}" class="card-img-top" alt="...">
+                                  <div class="card-body">
+                                        <h4 class="card-title">Servicio Social</h4>
+                                        <p class="card-text">Descripción Placeholder</p>
+                                        <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="col-md-4 mb-3">
+                                <div class="card h-100">
+                                  <img src="{% static 'img/uaz_fondito.jpg' %}" class="card-img-top" alt="...">
+                                  <div class="card-body">
+                                        <h4 class="card-title">Bolsa Trabajo</h4>
+                                        <p class="card-text">Descripción Placeholder</p>
+                                        <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="col-md-4 mb-3">
+                                <div class="card h-100">
+                                  <img src="{% static 'img/uaz_fondito.jpg' %}" class="card-img-top" alt="...">
+                                  <div class="card-body">
+                                        <h4 class="card-title">Sector Productivo</h4>
+                                        <p class="card-text">Descripción Placeholder</p>
+                                        <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                      </div>
+                      <!-- parte 2 -->
+                      <div class="carousel-item">
+                          <div class="row">
+
+                            <div class="col-md-4 mb-3">
+                              <div class="card h-100">
+                                <img src="{% static 'img/uaz_fondito.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                      <h4 class="card-title">Entidad cualificada</h4>
+                                      <p class="card-text">Descripción Placeholder</p>
+                                      <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                  </div>
+                              </div>
+                            </div> 
+
+                            <div class="col-md-4 mb-3">
+                                <div class="card h-100">
+                                  <img src="{% static 'img/uaz_fondito.jpg' %}" class="card-img-top" alt="...">
+                                  <div class="card-body">
+                                        <h4 class="card-title">Area Administrativa</h4>
+                                        <p class="card-text">Descripción Placeholder</p>
+                                        <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="col-md-4 mb-3">
+                                <div class="card h-100">
+                                  <img src="{% static 'img/uaz_fondito.jpg' %}" class="card-img-top" alt="...">
+                                  <div class="card-body">
+                                        <h4 class="card-title">Fortalecimiento</h4>
+                                        <p class="card-text">Descripción Placeholder</p>
+                                        <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                          </div>
+                      </div>
+                      <!-- parte 3 -->
+
+                      
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+

@@ -1,5 +1,5 @@
 {% load static %}
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,38 +28,31 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'servicio' %}">Servicio Social</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Sector productivo
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{% url 'bolsatrabajo' %}">Bolsa Trabajo</a></li>
-                            <li><a class="dropdown-item" href="#">Otra opción</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Estudios de preface
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{% url 'seguridad' %}">Seguridad</a></li>
-                            <li><a class="dropdown-item" href="#">Otra opción</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Entidad cualificada
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{% url 'eb' %}">EB</a></li>
-                            <li><a class="dropdown-item" href="#">Otra opción</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'sector_productivo' %}">Sector Productivo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'area' %}">Área administrativa</a>
+                        <a class="nav-link" href="{% url 'estudios_factibilidad' %}">Estudios factibilidad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'educacion_continua' %}">Educacion continua</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'area_administrativa' %}">Área administrativa</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'fortalecimiento' %}">Fortalecimiento</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Otros servicios
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">opcion1 </a></li>
+                            <li><a class="dropdown-item" href="#">opcion 2</a></li>
+                        </ul>
                     </li>
                 </ul>
                 
