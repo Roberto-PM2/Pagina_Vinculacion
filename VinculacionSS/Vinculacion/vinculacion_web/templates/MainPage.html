@@ -7,6 +7,7 @@
 
 {% block contenido %}
 {% load static %}
+<!-- estilos carousel -->
 <style>
   /* Styles for carousel */
   #myCarousel .carousel-item::before {
@@ -32,65 +33,66 @@
   }
 </style>
 
+<!-- estilos layout -->
 <style>
-  /* Your grid layout and styles */
-  .grid-container {
-      display: grid;
-      grid-template-columns: 3fr 300px;
-      column-gap: 30px;
-  }
-
-  header {
-      grid-column: span 3;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
-  }
-
-  article {
-      padding: 30px;
-  }
-
-  article p {
-      line-height: 2em;
-      color: #777;
-  }
-
-  .sideinfo {
+  
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
       padding: 0;
-      border-left: 1px solid #ddd;
-  }
+    }
 
-  footer {
-      grid-column: span 3;
-      text-align: center;
-      border-top: 1px solid #ddd;
-      padding: 30px;
-  }
+    .wrapper {
+      min-height: 100%;
+      position: relative;
+    }
 
-  /* Responsive styles */
-  @media screen and (max-width: 1200px) {
-      article {
-          grid-column: span 2;
-      }
-      .sideinfo {
-          padding: 16px;
-      }
-  }
+    #header {
+      
+      top: 0;
+      z-index: 9999;
+      padding-left: 0;
+      padding-right: 0;
+      width: 100%;
+      height: 500px;
+      
+      border-bottom: rgba(11, 18, 59, 0.5) 3px solid; /*optional*/
+    }
 
-  @media screen and (max-width: 980px) {
-      article, .sideinfo {
-          grid-column: span 3;
-      }
-      .sideinfo {
-          border-left: 0;
-          border-top: 1px solid #ddd;
-      }
-      article h2 {
-          font-size: 2.5em;
-      }
-  }
+    #footer {
+      width: 100%;
+      height: 4em;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      
+    }
+
+    #content {
+      width: 100%;
+      height: 2000px;
+      display: inline-block;
+      padding: 1em 0 4em 0; /*same height: that header and footer*/
+      margin: 1em 0 1em 0;
+    }
+
+    .sidenav {
+      float:left;
+      width:300px;
+      height: 100%;
+      
+      margin-right: 1em;
+    }
+
+    .info {
+      overflow: hidden;
+      height: 100%;
+      
+    }
 </style>
 
+<!-- estilos widget -->
 <style>
   /* Estilo para los widgets */
   .widget {
@@ -126,9 +128,10 @@
   }
 </style>
 
+<!-- estilos banner -->
 <style>
   .banner {
-    background-image: url('{% static 'img/1.png' %}');
+    background-image: url('{% static 'img/banner1.png' %}');
     background-size: 100% 300px; /* Cambia 500px al valor deseado */
     background-repeat: no-repeat;
     background-attachment: fixed; /* Opcional, para hacer la imagen fija en la ventana */
@@ -138,8 +141,8 @@
 
 </style>
 
-<div class="grid-container">
-  <header>
+<div class="wrapper">
+  <div id = "header">
     <div id="bannerVin" class="carousel slide mb-6" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -167,12 +170,8 @@
 
           <div class="container">
             <div class="carousel-caption text-start">
-              <h1>Vision institucional</h1>
-              <p>Para el año 2025, La Universidad Autónoma de Zacatecas "Francisco García Salinas" 
-                se visualiza como una institución moderna y de vanguardia, que atiende las necesidades educativas,
-                se proyecta entre las mejores instituciones públicas de educación superior del país 
-                y prevalece como la más importante de Zacatecas, al contribuir en la solución de los principales problemas
-                del desarrollo regional y nacional, forjando el futuro con el arte, la ciencia y el desarrollo cultural.</p>
+              <h1>VINCULACIÓN UAZ</h1>
+              <p></p>
               <p><a class="btn btn-lg btn-dark" href="https://www.uaz.edu.mx">Inicio</a></p>
             </div>
           </div>
@@ -214,288 +213,45 @@
       </button>
     </div>
 
-  </header>
-
-  <article>
-
-    <section class="vh-200" style="background-color: #f4f5f7;">
-      <div class="card mb-3" style="border-radius: .5rem; padding: 20px;">
-        <div class="row g-5">
-          <div class="col-md-4 gradient-custom text-center text-white"
-            style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
-            <img src="{% static 'img/fotoCoordinador.jpg' %}"
-              alt="Avatar" class="img-fluid my-5" style="width: 120px;" />
-              <p>Dr. Luis A. Aguilera Galaviz</p>
-              <p></p>
-            <i class="far fa-edit mb-5"></i>
-          </div>
-          <div class="col-md-8">
-            <div class="card-body p-4">
-              <h6>Contacto</h6>
-              <hr class="mt-0 mb-4">
-              <div class="row pt-1">
-                <div class="col-6 mb-3">
-                  <h6>Email</h6>
-                  <p class="text-muted">vinculacion@uaz.edu.mx</p>
-                </div>
-                <div class="col-6 mb-3">
-                  <h6>Telefono</h6>
-                  <p class="text-muted">492 92 407 21</p>
-                </div>
-              </div>
-              <h6>Informacion</h6>
-              <hr class="mt-0 mb-4">
-              <div class="row pt-1">
-                <div class="col-6 mb-3">
-                  <h6>Cargo</h6>
-                  <p class="text-muted">Coordinador de vinculacion</p>
-                </div>
-                <div class="col-6 mb-3">
-                  <h6>Ubicacion</h6>
-                  <p class="text-muted">Campus uaz siglo XXI</p>
-                </div>
-              </div>
-              <div class="d-flex justify-content-start">
-                <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
-                <a href="#!"><i class="fab fa-twitter fa-lg me-3"></i></a>
-                <a href="#!"><i class="fab fa-instagram fa-lg"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
+  </div>
+  <div id = "content">
+    <div class="sidenav">
+      <!-- lista lateral -->
+      <div id="sidebar" class="widget-area col-8 sticky-sidebar" role="complementary">
+        <aside class="widget">
+          <h4 class="widget-title">Afiliados</h4>
+          <ul>
+            <li><a href="https://bibliotecas.uaz.edu.mx" id="bibliotecas-link">Coordinación de bibliotecas</a></li>
+            <li><a href="https://cdocencia.uaz.edu.mx" id="cdocencia-link">Coordinación docencia</a></li>
+          </ul>
+        </aside>
+        <aside class="widget">
+          <h4 class="widget-title">Contactos</h4>
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/VinculacionUAZ/" id="vinface-link">
+                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24">
+                  <rect fill="none" height="24" width="24"/>
+                  <path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2 c-0.55,0-1,0.45-1,1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z"/>
+                </svg>
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a href="mailto:vinculacion@uaz.edu.mx" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                  <path d="M0 0h24v24H0z" fill="none"/>
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                vinculacion@uaz.edu.mx
+              </a>
+            </li>
+          </ul>
+        </aside>
       </div>
-    </section>
-    
-    
 
-    <!-- Lista servicios -->
-    <section class="pt-5 pb-5">
-      <div class="container">
-          <div class="row">
-              <div class="col-12">
-                  <h3 class="mb-3">Servicios</h3>
-              </div>
-          </div>
-          <div class="row">
-              <!-- Card 1: Servicio Social -->
-              <div class="col-md-4 mb-3">
-                  <div class="card h-100">
-                      <img src="{% static 'img/perajlogo.jpg' %}" width="150" height="220" class="card-img-top" alt="...">
-                      <div class="card-body">
-                          <h4 class="card-title">Servicio Social</h4>
-                          <p class="card-text">M. en C. Frco. Javier Aparicio
-                            vinculacionserviciosocial@uaz.edu.mx
-                          </p>
-                          <a href="https://www.facebook.com/" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24">
-                                <rect fill="none" height="24" width="24"/>
-                                <path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2 c-0.55,0-1,0.45-1,1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z"/>
-                            </svg>
-                          </a>
-                          <a href="mailto:vinculacionserviciosocial@uaz.edu.mx" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-                              <path d="M0 0h24v24H0z" fill="none"/>
-                              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                          </a>
-                          <p></p>
-                          <a class="btn btn-secondary" href="#">Mas informacion &raquo;</a>
-                      </div>
-                  </div>
-              </div>
-  
-              <!-- Card 2: Sector Productivo -->
-              <div class="col-md-4 mb-3">
-                  <div class="card h-100">
-                      <img src="{% static 'img/bolsaTlogo.jpg' %}" width="150" height="220" class="card-img-top" alt="...">
-                      <div class="card-body">
-                          <h4 class="card-title">Sector Productivo</h4>
-                          <p class="card-text">Dra. Nedith Mariana Ruiz Ambriz
-                            bolsadetrabajo@uaz.edu.mx
-                          </p>
-                          <a href="https://www.facebook.com/UAZBolsadetrabajo/?locale=es_LA" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24">
-                                <rect fill="none" height="24" width="24"/>
-                                <path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2 c-0.55,0-1,0.45-1,1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z"/>
-                            </svg>
-                          </a>
-                          <a href="mailto:bolsadetrabajo@uaz.edu.mx" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-                              <path d="M0 0h24v24H0z" fill="none"/>
-                              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                          </a>
-                          
-                          <a href="https://www.instagram.com/bolsadetrabajouaz/" target="_blank" style="display: inline-block; width: 24px; height: 24px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 30 30">
-                              <path d="M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 9 C 18.309 9 21 11.691 21 15 C 21 18.309 18.309 21 15 21 C 11.691 21 9 18.309 9 15 C 9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z"></path>
-                            </svg>
-                          </a>
-
-
-                          
-                          <p></p>
-                          <a class="btn btn-secondary" href="#">Mas informacion &raquo;</a>
-                          
-                      </div>
-                  </div>
-              </div>
-
-              <!-- Card 3: estudios -->
-              <div class="col-md-4 mb-3">
-                <div class="card h-100">
-                    <img src="{% static 'img/uaz_fondito.jpg' %}" width="150" height="220" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h4 class="card-title">Estudios de factibilidad</h4>
-                        <p class="card-text">M. en C. Nicolas Lopez Ramirez
-                          egresados@uaz.edu.mx
-                        </p>
-                        <a href="https://www.facebook.com/" target="_blank">
-                          <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24">
-                              <rect fill="none" height="24" width="24"/>
-                              <path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2 c-0.55,0-1,0.45-1,1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z"/>
-                          </svg>
-                        </a>
-                        <a href="mailto:egresados@uaz.edu.mx" target="_blank">
-                          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-                            <path d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                          </svg>
-                        </a>
-                        <p></p>
-                        <a class="btn btn-secondary" href="#">Mas informacion &raquo;</a>
-                    </div>
-                </div>
-            </div>
-          </div>
-
-  
-          <div class="row">
-              <!-- Card 4: Entidad cualificada -->
-              <div class="col-md-4 mb-3">
-                  <div class="card h-100">
-                      <img src="{% static 'img/cap_logo.png' %}" width="150" height="220" class="card-img-top" alt="...">
-                      <div class="card-body">
-                          <h4 class="card-title">Educacion continua</h4>
-                          <p class="card-text">M. en C. Araceli Graciano Gaytan
-                            capacitacion.vinculacion@uaz.edu.mx
-                            M. en C. Perla E. Goytia Realzola
-                            certificaperla@gmail.com
-                          </p>
-                          <a href="https://www.facebook.com/" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24">
-                                <rect fill="none" height="24" width="24"/>
-                                <path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2 c-0.55,0-1,0.45-1,1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z"/>
-                            </svg>
-                          </a>
-                          <a href="mailto:capacitacion.vinculacion@uaz.edu.mx" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-                              <path d="M0 0h24v24H0z" fill="none"/>
-                              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                          </a>
-                          <p></p>
-                          <a class="btn btn-secondary" href="#">Mas informacion &raquo;</a>
-                      </div>
-                  </div>
-              </div>
-  
-              <!-- Card 5: Area Administrativa -->
-              <div class="col-md-4 mb-3">
-                <div class="card h-100">
-                    <img src="{% static 'img/3JUNTAS.png' %}" width="150" height="220" class="card-img-top" alt="...">
-                    <div class="card-body d-flex flex-column">
-                        <h4 class="card-title">Area Administrativa</h4>
-                        <p class="card-text">Ing. Gabriela Flores Santoyo<br>vinculacion@uaz.edu.mx</p>
-                        <div class="mt-auto">
-                            <a href="https://www.facebook.com/" target="_blank">
-                              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24">
-                                  <rect fill="none" height="24" width="24"/>
-                                  <path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2 c-0.55,0-1,0.45-1,1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z"/>
-                              </svg>
-                            </a>
-                            <a href="https://www.google.com/" target="_blank">
-                                <!-- Tu ícono de Google -->
-                              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-                                <path d="M0 0h24v24H0z" fill="none"/>
-                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                              </svg>
-                            </a>
-                            <p></p>
-                            <a class="btn btn-secondary mt-auto" href="#">Mas información &raquo;</a>
-                        </div>
-                    </div>
-                </div>
-              </div>
-
-  
-              <!-- Card 6: Fortalecimiento -->
-              <div class="col-md-4 mb-3">
-                  <div class="card h-100">
-                      <img src="{% static 'img/uaz_fondito.jpg' %}" width="150" height="220" class="card-img-top" alt="...">
-                      <div class="card-body">
-                          <h4 class="card-title">Fortalecimiento y desarrollo</h4>
-                          <p class="card-text">M. en C. Juan A. Pacheco Lopez
-                            fortalecimientoydesarrolloregional@uaz.edu.mx
-                          </p>
-                          <a href="https://www.facebook.com/" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24">
-                                <rect fill="none" height="24" width="24"/>
-                                <path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2 c-0.55,0-1,0.45-1,1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z"/>
-                            </svg>
-                          </a>
-                          <a href="mailto:fortalecimientoydesarrolloregional@uaz.edu.mx" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-                              <path d="M0 0h24v24H0z" fill="none"/>
-                              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                          </a>
-                          <p></p>
-                          <a class="btn btn-secondary" href="#">Mas informacion &raquo;</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-    </section>
-  </article>
-
-  <sideinfo>
-  
-        <!-- lista lateral -->
-        <div id="sidebar" class="widget-area col-8 sticky-sidebar" role="complementary">
-          <aside class="widget">
-            <h4 class="widget-title">Afiliados</h4>
-            <ul>
-              <li><a href="https://bibliotecas.uaz.edu.mx" id="bibliotecas-link">Coordinación de bibliotecas</a></li>
-              <li><a href="https://cdocencia.uaz.edu.mx" id="cdocencia-link">Coordinación docencia</a></li>
-            </ul>
-          </aside>
-          <aside class="widget">
-            <h4 class="widget-title">Contactos</h4>
-            <ul>
-              <li>
-                <a href="https://www.facebook.com/VinculacionUAZ/" id="vinface-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24">
-                    <rect fill="none" height="24" width="24"/>
-                    <path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2 c-0.55,0-1,0.45-1,1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z"/>
-                  </svg>
-                  Facebook
-                </a>
-              </li>
-              <li>
-                <a href="mailto:vinculacion@uaz.edu.mx" target="_blank">
-                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-                    <path d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                  </svg>
-                  vinculacion@uaz.edu.mx
-                </a>
-              </li>
-            </ul>
-          </aside>
-        </div>
-        
+      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v18.0" nonce="XNiWqg3h"></script>
+      <div class="fb-page" data-href="https://www.facebook.com/UAZBolsadetrabajo/?ref=embed_page" data-tabs="timeline, events" data-width="250" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/UAZBolsadetrabajo/?ref=embed_page" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/UAZBolsadetrabajo/?ref=embed_page">Bolsa de trabajo UAZ</a></blockquote></div>
       <script>
           // JavaScript para redirigir al hacer clic en los enlaces
           document.getElementById('bibliotecas-link').addEventListener('click', function () {
@@ -510,12 +266,253 @@
             window.location.href = this.getAttribute('href');
         });
       </script>
-  </sideinfo>
-
-  <footer>
-      <p>Copyright 2023</p>
-  </footer>
+    </div>
+    <div class="info">
+      <section class="vh-200" style="background-color: #f4f5f7;">
+        <div class="card mb-3" style="border-radius: .5rem; padding: 20px;">
+          <div class="row g-5">
+            <div class="col-md-4 gradient-custom text-center text-white"
+              style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+              <img src="{% static 'img/fotoCoordinador.jpg' %}"
+                alt="Avatar" class="img-fluid my-5" style="width: 120px;" />
+                <p style="color: black;">Dr. Luis A. Aguilera Galaviz</p>
+                <p></p>
+              <i class="far fa-edit mb-5"></i>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body p-4">
+                <h6>Contacto</h6>
+                <hr class="mt-0 mb-4">
+                <div class="row pt-1">
+                  <div class="col-6 mb-3">
+                    <h6>Email</h6>
+                    <p class="text-muted">vinculacion@uaz.edu.mx</p>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <h6>Telefono</h6>
+                    <p class="text-muted">492 92 407 21</p>
+                  </div>
+                </div>
+                <h6>Informacion</h6>
+                <hr class="mt-0 mb-4">
+                <div class="row pt-1">
+                  <div class="col-6 mb-3">
+                    <h6>Cargo</h6>
+                    <p class="text-muted">Coordinador de vinculación</p>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <h6>Ubicación</h6>
+                    <p class="text-muted">Campus uaz siglo XXI</p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-start">
+                  <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
+                  <a href="#!"><i class="fab fa-twitter fa-lg me-3"></i></a>
+                  <a href="#!"><i class="fab fa-instagram fa-lg"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Lista servicios -->
+      <section class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="mb-3">Servicios</h3>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Card 1: Servicio Social -->
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <img src="{% static 'img/LogoServicioBueno.png' %}" width="150" height="220" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 class="card-title">Servicio Social</h4>
+                            <p class="card-text">M. en C. Frco. Javier Aparicio
+                              vinculacionserviciosocial@uaz.edu.mx
+                            </p>
+                            <a href="https://www.facebook.com/" target="_blank">
+                              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24">
+                                  <rect fill="none" height="24" width="24"/>
+                                  <path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2 c-0.55,0-1,0.45-1,1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z"/>
+                              </svg>
+                            </a>
+                            <a href="mailto:vinculacionserviciosocial@uaz.edu.mx" target="_blank">
+                              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                              </svg>
+                            </a>
+                            <p></p>
+                            <a class="btn btn-secondary" href="#">Mas información &raquo;</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Card 2: Sector Productivo -->
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <img src="{% static 'img/bolsaTlogo.jpg' %}" width="150" height="220" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 class="card-title">Vinculación con el sector productivo</h4>
+                            <p class="card-text">Dra. Nedith Mariana Ruiz Ambriz
+                              bolsadetrabajo@uaz.edu.mx
+                            </p>
+                            <a href="https://www.facebook.com/UAZBolsadetrabajo/?locale=es_LA" target="_blank">
+                              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24">
+                                  <rect fill="none" height="24" width="24"/>
+                                  <path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2 c-0.55,0-1,0.45-1,1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z"/>
+                              </svg>
+                            </a>
+                            <a href="mailto:bolsadetrabajo@uaz.edu.mx" target="_blank">
+                              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                              </svg>
+                            </a>
+                            
+                            <a href="https://www.instagram.com/bolsadetrabajouaz/" target="_blank" style="display: inline-block; width: 24px; height: 24px;">
+                              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 30 30">
+                                <path d="M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 9 C 18.309 9 21 11.691 21 15 C 21 18.309 18.309 21 15 21 C 11.691 21 9 18.309 9 15 C 9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z"></path>
+                              </svg>
+                            </a>
+                            
+                            <p></p>
+                            <a class="btn btn-secondary" href="{% url 'sector_productivo' %}">Mas información &raquo;</a>
+                            
+                        </div>
+                    </div>
+                </div>
+  
+                <!-- Card 3: estudios -->
+                <div class="col-md-4 mb-3">
+                  <div class="card h-100">
+                      <img src="{% static 'img/uaz_fondito.jpg' %}" width="150" height="220" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h4 class="card-title">Estudios de factibilidad, pertinencia y egresados</h4>
+                          <p class="card-text">M. en C. Nicolas Lopez Ramirez
+                            egresados@uaz.edu.mx
+                          </p>
+                          <a href="https://www.facebook.com/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24">
+                                <rect fill="none" height="24" width="24"/>
+                                <path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2 c-0.55,0-1,0.45-1,1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z"/>
+                            </svg>
+                          </a>
+                          <a href="mailto:egresados@uaz.edu.mx" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                              <path d="M0 0h24v24H0z" fill="none"/>
+                              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                          </a>
+                          <p></p>
+                          <a class="btn btn-secondary" href="#">Mas información &raquo;</a>
+                      </div>
+                  </div>
+              </div>
+            </div>
+  
+    
+            <div class="row">
+                <!-- Card 4: Entidad cualificada -->
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <img src="{% static 'img/cap_logo.png' %}" width="150" height="220" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 class="card-title">Servicios Profesionales de Capacitación</h4>
+                            <p class="card-text">Capacitación 
+                            </p>
+                            <p class="card-text">M. en M. Araceli Graciano Gaytan
+                              capacitacion.vinculacion@uaz.edu.mx
+                            </p>
+                            <p class="card-text">Registro de eventos
+                            </p>
+                            <p class="card-text">M. en C. Perla E. Goytia Realzola
+                              certificaperla@gmail.com
+                            </p>
+                            <a href="https://www.facebook.com/" target="_blank">
+                              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24">
+                                  <rect fill="none" height="24" width="24"/>
+                                  <path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2 c-0.55,0-1,0.45-1,1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z"/>
+                              </svg>
+                            </a>
+                            <a href="mailto:capacitacion.vinculacion@uaz.edu.mx" target="_blank">
+                              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                              </svg>
+                            </a>
+                            <p></p>
+                            <a class="btn btn-secondary" href="#">Mas información &raquo;</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Card 5: Area Administrativa -->
+                <div class="col-md-4 mb-3">
+                  <div class="card h-100">
+                      <img src="{% static 'img/logoEceuaz.jpg' %}" width="150" height="220" class="card-img-top" alt="...">
+                      <div class="card-body d-flex flex-column">
+                          <h4 class="card-title">Área Administrativa</h4>
+                          <p class="card-text">Ing. Gabriela Flores Santoyo<br>vinculacion@uaz.edu.mx</p>
+                          <div class="mt-auto">
+                              <a href="https://www.facebook.com/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24">
+                                    <rect fill="none" height="24" width="24"/>
+                                    <path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2 c-0.55,0-1,0.45-1,1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z"/>
+                                </svg>
+                              </a>
+                              <a href="https://www.google.com/" target="_blank">
+                                  <!-- Tu ícono de Google -->
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                  <path d="M0 0h24v24H0z" fill="none"/>
+                                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                              </a>
+                              <p></p>
+                              <a class="btn btn-secondary mt-auto" href="#">Mas información &raquo;</a>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+  
+                <!-- Card 6: Fortalecimiento -->
+                <div class="col-md-4 mb-3">
+                  <div class="card h-100">
+                      <img src="{% static 'img/uaz_fondito.jpg' %}" width="150" height="220" class="card-img-top" alt="...">
+                      <div class="card-body d-flex flex-column">
+                          <h4 class="card-title">Fortalecimiento y desarrollo</h4>
+                          <p class="card-text">M. en C. Juan A. Pacheco Lopez<br>fortalecimientoydesarrolloregional@uaz.edu.mx</p>
+                          <div class="mt-auto">
+                              <a href="https://www.facebook.com/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24">
+                                    <rect fill="none" height="24" width="24"/>
+                                    <path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2 c-0.55,0-1,0.45-1,1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z"/>
+                                </svg>
+                              </a>
+                              <a href="mailto:fortalecimientoydesarrolloregional@uaz.edu.mx" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                  <path d="M0 0h24v24H0z" fill="none"/>
+                                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                              </a>
+                              <p></p>
+                              <a class="btn btn-secondary mt-auto" href="{% url 'fortalecimiento' %}">Mas información &raquo;</a>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div id="footer"></div>
 </div>
+
 
 
 <p></p>
@@ -595,7 +592,82 @@
 
   
 </div><!-- /.container -->
+<div class="b-example-divider"></div>
+
+
+<footer class="py-5 bg-dark text-white">
+  <div class="row">
+    <div class="col">
+      <div class="d-flex flex-column align-items-center mb-3 link-dark text-decoration-none" style="margin-left: 20px;">
+        <img src="{% static 'img/LogoVinculacion.jpg' %}" alt="Vinculación" width="150" height="150">
+        <p class="text-light">Vinculación</p>
+      </div>
+    </div>
     
+    
+    
+  
+    <div class="col">
+  
+    </div>
+    <div class="col-2">
+      <h5>Info 1</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 1</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 2</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 3</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 4</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 5</a></li>
+      </ul>
+    </div>
+
+    <div class="col-2">
+      <h5>Info 2</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 1</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 2</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 3</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 4</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 5</a></li>
+      </ul>
+    </div>
+
+    <div class="col-2">
+      <h5>Info 3</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 1</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 2</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 3</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 4</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 5</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-between py-4 my-4 border-top">
+    <p>&copy; 2023 Vinculación. All rights reserved.</p>
+    <ul class="list-unstyled d-flex">
+      <li class="ms-3">
+        <a class="link-light" href="https://www.facebook.com/VinculacionUAZ/" id="vinface-link">
+          <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24">
+            <rect fill="none" height="24" width="24"/>
+            <path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2 c-0.55,0-1,0.45-1,1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z"/>
+          </svg>
+          
+        </a>
+      </li>
+      <li class="ms-3"><a class="link-light" href="mailto:bolsadetrabajo@uaz.edu.mx"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a></li>
+      <li class="ms-3">
+        <a class="link-light" href="https://www.instagram.com/bolsadetrabajouaz/" target="_blank" style="display: inline-block; width: 24px; height: 24px;">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 30 30">
+            <path d="M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z"></path>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
 
     
 {% endblock contenido %}
