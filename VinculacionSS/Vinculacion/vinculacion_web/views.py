@@ -32,3 +32,6 @@ def area_administrativa(request):
 
 def fortalecimiento(request):
     return render(request, 'fortalecimiento.html')
+
+def certificacion(request):
+    return render(request, 'certificacion.html')

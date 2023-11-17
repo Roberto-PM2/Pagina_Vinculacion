@@ -11,4 +11,5 @@ urlpatterns = [
     path('educacion_continua/', views.educacion_continua, name='educacion_continua'),  # Agregamos la URL para la vista 'eb'
     path('area_administrativa/', views.area_administrativa, name='area_administrativa'),  # Agregamos la URL para la vista 'area'
     path('fortalecimiento/', views.fortalecimiento, name='fortalecimiento'),  # Agregamos la URL para la vista 'fortalecimiento'
+    path('certificacion/', views.certificacion, name='certificacion'),
 ]

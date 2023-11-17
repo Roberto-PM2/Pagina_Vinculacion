@@ -1,0 +1,464 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Certificacion
+{% endblock titulo %}
+    
+
+{% block contenido %}
+
+{% load static %}
+
+<!-- estilos carousel -->
+<style>
+  /* Styles for carousel */
+  #myCarousel .carousel-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  #myCarousel .carousel-caption {
+      color: white;
+  }
+
+  #myCarousel .carousel-caption h1,
+  #myCarousel .carousel-caption p {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+  }
+  #myCarousel .carousel-caption p {
+    font-size: 18px; /* Ajusta el tamaño de fuente según tus necesidades */
+  }
+</style>
+
+<!-- estilos layout -->
+<style>
+  
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrapper {
+      min-height: 100%;
+      position: relative;
+    }
+
+    #header {
+      
+      top: 0;
+      z-index: 9999;
+      padding-left: 0;
+      padding-right: 0;
+      width: 100%;
+      height: 500px;
+      
+      border-bottom: rgba(11, 18, 59, 0.5) 3px solid; /*optional*/
+    }
+
+    #footer {
+      width: 100%;
+      height: 4em;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      
+    }
+
+    #content {
+      width: 100%;
+      height: 2000px;
+      display: inline-block;
+      padding: 1em 0 4em 0; /*same height: that header and footer*/
+      margin: 1em 0 1em 0;
+    }
+
+    .sidenav {
+      float:left;
+      width:300px;
+      height: 100%;
+      
+      margin-right: 1em;
+    }
+
+    .info {
+      overflow: hidden;
+      height: 100%;
+      
+    }
+</style>
+
+<!-- estilos widget -->
+<style>
+  /* Estilo para los widgets */
+  .widget {
+      border-radius: 10px; /* Esquinas redondeadas */
+      padding: 2px; /* Espaciado interno */
+      margin-bottom: 5px; /* Espaciado entre widgets */
+  }
+
+  /* Estilo para el título del widget */
+  .widget h4.widget-title {
+      background-color: #063970; /* Fondo azul para el título */
+      color: #fff; /* Texto blanco para el título */
+      border-radius: 10px 10px 0 0; /* Esquinas redondeadas solo en la parte superior */
+      padding: 10px; /* Espaciado interno para el título */
+  }
+
+  /* Estilo para los elementos de lista en los widgets */
+  .widget ul {
+      list-style: none; /* Elimina los puntos de lista */
+      padding: 0;
+  }
+
+  .widget ul li {
+      border-radius: 10px; /* Esquinas redondeadas */
+      background-color: #f5f5f5; /* Fondo ligeramente gris para los elementos de lista */
+      padding: 10px; /* Espaciado interno para los elementos de lista */
+      transition: background-color 0.3s; /* Transición de color de fondo */
+  }
+
+  /* Cambiar el color de fondo al pasar el mouse sobre los elementos de lista */
+  .widget ul li:hover {
+      background-color: #ddd; /* Fondo gris más oscuro en estado hover */
+  }
+</style>
+
+<!-- estilos banner -->
+<style>
+  .banner {
+    background-image: url('{% static 'img/banner1.png' %}');
+    background-size: 100% 300px; /* Cambia 500px al valor deseado */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Opcional, para hacer la imagen fija en la ventana */
+    /* Otras configuraciones de estilo si es necesario */
+  }
+
+
+</style>
+
+
+
+<div class="wrapper">
+  <div id = "header">
+    <div id="bannerVin" class="carousel slide mb-6" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'img/banner_Bueno.png' %}" class="d-block mx-auto" style="width: 100%; max-height: 100px;" alt="...">
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1></h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      
+    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'img/logo_uaz2.jpeg' %}" class="d-block mx-auto" style="width: 100%; max-height: 400px;" alt="...">
+
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>VINCULACIÓN UAZ</h1>
+              <p></p>
+              <p><a class="btn btn-lg btn-dark" href="https://www.uaz.edu.mx">Inicio</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'img/edificio_vinculacion.jpg' %}" class="d-block mx-auto" style="width: 100%; max-height: 400px;" alt="...">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>MISIÓN DE LA COORDINACIÓN DE VINCULACIÓN</h1>
+              <p>Vincular a la Universidad Autónoma de Zacatecas "Francisco García Salinas (UAZ), 
+                con los sectores: social, productivo, académico y gubernamental; 
+                a través de programas y proyectos que coadyuven en el desarrollo integral de la Universidad, 
+                el Estado y del País.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'img/UAZentrada.jpg' %}" class="d-block mx-auto" style="width: 100%; max-height: 400px;" alt="...">
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1>VISIÓN DE LA COORDINACIÓN DE VINCULACIÓN</h1>
+              <p>Para el año 2025, ser la instancia de vinculación de las instituciones de educación superior más importante de la región 
+                centro- norte que atienda las necesidades del sector productivo, social, 
+                académico y gubernamental a través de los servicios que brinda la universidad en materia de investigación, 
+                docencia y extensión, para el desarrollo social y humano.</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </div>
+  <div id = "content">
+    <div class="sidenav">
+      
+        <!-- lista lateral -->
+        <div id="sidebar" class="widget-area col-10 sticky-sidebar" role="complementary">
+          
+          <aside class="widget">
+            <h4 class="widget-title">Contactos</h4>
+            <ul>
+              <li>
+                <a href="mailto:certificacion@uaz.edu.mx" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                  </svg>
+                  certificacion@uaz.edu.mx
+                </a>
+              </li>
+              <li>
+                <a href="http://www.eceuaz.com
+                " target="_blank">
+                <svg style="color: rgb(0, 0, 0);" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16"> <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z" fill="#000000"></path> </svg>
+                ECEUAZ
+                </a>
+              </li>
+            </ul>
+          </aside>
+        </div>
+    </div>
+    <div class="info">
+      
+      <div class="card mb-3" style="border-radius: .5rem; padding: 20px;">
+        <div class="row g-5">
+          <div class="col-md-4 gradient-custom text-center text-white"
+            style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+            <img src="{% static 'img/user_icon.jpg' %}"
+              alt="Avatar" class="img-fluid my-5" style="width: 120px;" />
+              <p style="color: black;">Paola Carloso Maldonado</p>
+              <p></p>
+            <i class="far fa-edit mb-5"></i>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body p-4">
+              <h6>Contacto</h6>
+              <hr class="mt-0 mb-4">
+              <div class="row pt-1">
+                <div class="col-6 mb-3">
+                  <h6>Email</h6>
+                  <p class="text-muted">certificacion@uaz.edu.mx</p>
+                </div>
+                <div class="col-6 mb-3">
+                  <h6>Telefono</h6>
+                  <p class="text-muted">492 117 66 78</p>
+                </div>
+                
+              </div>
+              <h6>Informacion</h6>
+              <hr class="mt-0 mb-4">
+              <div class="row pt-1">
+                <div class="col-6 mb-3">
+                  <h6>Cargo</h6>
+                  <p class="text-muted">Responsable de la entidad de certificación y evaluación de competencias laborales</p>
+                </div>
+                <div class="col-6 mb-3">
+                  <h6>Ubicación</h6>
+                  <p class="text-muted">Campus uaz siglo XXI</p>
+                </div>
+              </div>
+              <div class="d-flex justify-content-start">
+                <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
+                <a href="#!"><i class="fab fa-twitter fa-lg me-3"></i></a>
+                <a href="#!"><i class="fab fa-instagram fa-lg"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- fin tarjeta presentacion -->
+      
+
+      <h1>ECEUAZ</h1>
+      <!-- Lista servicios -->
+      <section class="pt-5 pb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3 class="mb-3"></h3>
+            </div>
+          </div>
+      
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Mision</h5>
+                  <p class="card-text">Somos la entidad de certificación y evaluación de competencias laborales en el estado de Zacatecas, acreditada por el Consejo Nacional de Normalización y Certificación de Competencias Laborales (CONOCER)-SEP, para capacitar, evaluar y certificar competencias laborales de las personas de diversas instituciones, organizaciones no gubernamentales y sociales, mediante una oferta permanente de diversos estándares de competencia.</p>
+                  <a href="http://www.eceuaz.com" class="btn btn-primary">ECEUAZ</a>
+
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-md-4 mb-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Vision</h5>
+                  <p class="card-text">Para 2022, ser una entidad certificadora reconocida en el país como la de mayor capacidad técnica por la calidad y cobertura de sus servicios en estándares de competencias laborales, caracterizada además, por su indudable sentido humanista, la excelencia y la competitividad en la formación de usuarios para la adquisición de habilidades y destrezas en el trabajo que influyen en el desarrollo de la sociedad.</p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-md-4 mb-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Objetivo</h5>
+                  <p class="card-text">Facilitar la conexión entre usuarios de la ECEUAZ y entidades para mejorar calidad productiva.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <h1>CONOCER</h1>
+      <!-- Lista servicios -->
+      <section class="pt-5 pb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3 class="mb-3"></h3>
+            </div>
+          </div>
+      
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">¿Qué hacemos?</h5>
+                  <p class="card-text">El CONOCER coordina y promueve el Sistema Nacional de Competencias para que México cuente con empresarios, trabajadores, docentes, estudiantes y servidores públicos más competentes.</p>
+                  <a href="https://conocer.gob.mx" class="btn btn-primary">Mas Informacion</a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+
+
+
+    </div>
+  </div>
+  <div id="footer"></div>
+</div>
+
+
+
+<p></p>
+
+  
+
+<div class="b-example-divider"></div>
+
+
+<footer class="py-5 bg-dark text-white">
+  <div class="row">
+    <div class="col">
+      <div class="d-flex flex-column align-items-center mb-3 link-dark text-decoration-none" style="margin-left: 20px;">
+        <img src="{% static 'img/LogoVinculacion.jpg' %}" alt="Vinculación" width="150" height="150">
+        <p class="text-light">Vinculación</p>
+      </div>
+    </div>
+    
+    
+    
+  
+    <div class="col">
+  
+    </div>
+    <div class="col-2">
+      <h5>Info 1</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 1</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 2</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 3</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 4</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 5</a></li>
+      </ul>
+    </div>
+
+    <div class="col-2">
+      <h5>Info 2</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 1</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 2</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 3</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 4</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 5</a></li>
+      </ul>
+    </div>
+
+    <div class="col-2">
+      <h5>Info 3</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 1</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 2</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 3</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 4</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">ejemplo 5</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-between py-4 my-4 border-top">
+    <p>&copy; 2023 Vinculación. All rights reserved.</p>
+    <ul class="list-unstyled d-flex">
+      <li class="ms-3">
+        <a class="link-light" href="https://www.facebook.com/VinculacionUAZ/" id="vinface-link">
+          <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24">
+            <rect fill="none" height="24" width="24"/>
+            <path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2 c-0.55,0-1,0.45-1,1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z"/>
+          </svg>
+          
+        </a>
+      </li>
+      <li class="ms-3"><a class="link-light" href="mailto:bolsadetrabajo@uaz.edu.mx"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a></li>
+      <li class="ms-3">
+        <a class="link-light" href="https://www.instagram.com/bolsadetrabajouaz/" target="_blank" style="display: inline-block; width: 24px; height: 24px;">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 30 30">
+            <path d="M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z"></path>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+
+
+
+    
+{% endblock contenido %}
