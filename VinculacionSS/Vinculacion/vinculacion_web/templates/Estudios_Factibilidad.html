@@ -237,7 +237,7 @@
                   <path d="M0 0h24v24H0z" fill="none"/>
                   <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                 </svg>
-                fortalecimientoydesarrolloregional@uaz.edu.mx
+                egresados@uaz.edu.mx
               </a>
             </li>
           </ul>
@@ -317,6 +317,78 @@
         que les permita atender los requerimientos de indicadores que las instancias evaluadoras exigen
         para los procesos de acreditacion, reeacreditacion o apertura de nuevos programas academicos
       </p>
+
+      <!-- Lista servicios -->
+      <section class="pt-5 pb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3 class="mb-3">Procedimientos del departamento de estudios de factibiidad y pertinencia</h3>
+            </div>
+          </div>
+      
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <h5 class="card-title">Procedimiento estudios factibilidad y pertinencia</h5>
+                  <p class="card-text"> </p>
+                  <div class="d-flex flex-row">
+
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-pdf">Ver pdf</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Procedimiento para el programa institucional de seguimiento de egresados</h5>
+                  <p class="card-text"> </p>
+
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-pdf2">Ver pdf</button>
+                    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="modal fade" id="modal-pdf" tabindex="-1" aria-labelledby="modal-pdf-label" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 80%; height: 100%;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal-pdf-label">Tutorial</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe id="pdf-iframe" src="{% static 'docs/PD-SAC.05-02 PROCEDIMIENTO ESTUDIOS DE FACTIBILIDAD Y PERTINENCIA EDUCATIVA.pdf' %}" frameborder="0" style="width: 100%; height: 800;"></iframe>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal-pdf2" tabindex="-1" aria-labelledby="modal-pdf-label" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 80%; height: 100%;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal-pdf-label">Tutorial</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe id="pdf-iframe" src="{% static 'docs/PD-SAC.05-01 PROCEDIMIENTO PARA EL PROGRAMA INSTITUCIONAL DE SEGUIMIENTO DE EGRESADOS.pdf' %}" frameborder="0" style="width: 100%; height: 800;"></iframe>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div id="footer"></div>
